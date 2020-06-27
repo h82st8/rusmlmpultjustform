@@ -11,43 +11,75 @@ onload = function () {
 			}
 			event.target.classList.add('languages__button--active');
 
+
+
 			let ru = document.querySelector("#ru");
 			let en = document.querySelector("#en");
+
+			let a = ["#login_tab_button",
+				"#signup_tab_button",
+				"#login_button--login",
+				"#login_button--signup",
+				"#label_login_password",
+				"#label_signup_password",
+				"#label_login_email",
+				"#label_signup_email",
+				"#label_signup_id",
+				"#label_login_checkbox",
+				"#label_signup_checkbox__keep_logged",
+				"#login_button--lost_pass",
+				"#connect",
+				"#privacy_footer__link",
+				"#use_footer__link",
+				"#label_signup_checkbox__accept"
+			];
+
+			let b = ["Войти",
+				"Регистрация",
+				"Войти",
+				"Регистрация",
+				"Пароль",
+				"Пароль",
+				"Емэйл",
+				"Емэйл",
+				"Справочнный id",
+				"Запомнить меня",
+				"Запомнить меня",
+				"Забыли пароль?",
+				"<img src='./images/logo-ot.svg'	alt='логотип oton.org'> Присоединиться к <b>oton.org</b>",
+				"Политика конфиденциальности",
+				"Условия пользования",
+				"Я принимаю <a class='label_link' href='#'>условия использования</a> и <a class='label_link' href='#'>политику конфиденциальности</a>"
+			];
+
+			let c = ["Log in",
+				"Sign up",
+				"Log in",
+				"Sign up",
+				"Password",
+				"Password",
+				"Email",
+				"Email",
+				"Referral ID",
+				"Keep me logged in",
+				"Keep me logged in",
+				"Lost your password?",
+				"<img src='./images/logo-ot.svg'	alt='логотип oton.org'> Connect with <b>oton.org</b>",
+				"Privacy policy",
+				"Terms of use",
+				"I accept the <a class='label_link' href='#'>terms of use </a> and <a class='label_link' href='#'>privacy policy</a>"
+			];
+
 			if (ru.classList[1] === "languages__button--active") {
-				document.querySelector("#login_tab_button").innerHTML = "Войти";
-				document.querySelector("#signup_tab_button").innerHTML = "Регистрация";
-				document.querySelector("#login_button--login").innerHTML = "Войти";
-				document.querySelector("#login_button--signup").innerHTML = "Регистрация";
-				document.querySelector("#label_login_password").innerHTML = "Пароль";
-				document.querySelector("#label_signup_password").innerHTML = "Пароль";
-				document.querySelector("#label_login_email").innerHTML = "Емэйл";
-				document.querySelector("#label_signup_email").innerHTML = "Емэйл";
-				document.querySelector("#label_signup_id").innerHTML = "Справочнный id";
-				document.querySelector("#label_login_checkbox").innerHTML = "Запомнить меня";
-				document.querySelector("#label_signup_checkbox__keep_logged").innerHTML = "Запомнить меня";
-				document.querySelector("#login_button--lost_pass").innerHTML = "Забыли пароль?";
-				document.querySelector("#connect").innerHTML = "<img src='./images/logo-ot.svg'	alt='логотип oton.org'> Присоединиться к <b>oton.org</b>";
-				document.querySelector("#privacy_footer__link").innerHTML = "Политика конфиденциальности";
-				document.querySelector("#use_footer__link").innerHTML = "Условия пользования";
-				document.querySelector("#label_signup_checkbox__accept").innerHTML = "Я принимаю <a class='label_link' href='#'>условия использования</a> и <a class='label_link' href='#'>политику конфиденциальности</a>";
+				for (let i = 0; i < a.length; i++) {
+					document.querySelector(a[i]).innerHTML = b[i];
+				}
 			} else if (en.classList[1] === "languages__button--active") {
-				document.querySelector("#login_tab_button").innerHTML = "Log in";
-				document.querySelector("#signup_tab_button").innerHTML = "Sign up";
-				document.querySelector("#login_button--login").innerHTML = "Log in";
-				document.querySelector("#login_button--signup").innerHTML = "Sign up";
-				document.querySelector("#label_login_password").innerHTML = "Password";
-				document.querySelector("#label_signup_password").innerHTML = "Password";
-				document.querySelector("#label_login_email").innerHTML = "Email";
-				document.querySelector("#label_signup_email").innerHTML = "Email";
-				document.querySelector("#label_signup_id").innerHTML = "Referral ID";
-				document.querySelector("#label_login_checkbox").innerHTML = "Keep me logged in";
-				document.querySelector("#label_signup_checkbox__keep_logged").innerHTML = "Keep me logged in";
-				document.querySelector("#login_button--lost_pass").innerHTML = "Lost your password?";
-				document.querySelector("#connect").innerHTML = "<img src='./images/logo-ot.svg'	alt='логотип oton.org'> Connect with <b>oton.org</b>";
-				document.querySelector("#privacy_footer__link").innerHTML = "Privacy policy";
-				document.querySelector("#use_footer__link").innerHTML = "Terms of use";
-				document.querySelector("#label_signup_checkbox__accept").innerHTML = "I accept the <a class='label_link' href='#'>terms of use </a> and <a class='label_link' href='#'>privacy policy</a>";
+				for (let i = 0; i < a.length; i++) {
+					document.querySelector(a[i]).innerHTML = c[i];
+				}
 			}
+
 		}
 	});
 
